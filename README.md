@@ -71,8 +71,9 @@ Add the following, filling in your details:
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASSWORD=your_16_digit_gmail_app_password
 NOTIFICATION_EMAIL=email_to_send_alerts_to@example.com
-Important: For EMAIL_PASSWORD, you must use a Gmail App Password. You can generate one from your Google Account's security settings. Your regular password will not work.
  ```
+Important: For EMAIL_PASSWORD, you must use a Gmail App Password. You can generate one from your Google Account's security settings. Your regular password will not work.
+
 
 #4. Usage
 Price Pulse is managed entirely from the command line.
@@ -83,21 +84,24 @@ Bash
 ```bash
 # Usage: python price_tracker.py add "URL" --threshold YOUR_PRICE --name "PRODUCT_NAME"
 python price_tracker.py add "[https://www.amazon.in/dp/B0DGJHBX5Y](https://www.amazon.in/dp/B0DGJHBX5Y)" --threshold 73000 --name "iPhone 16 128 GB"
+ ```
 ➡️ Run a Single Price Check
 Perfect for testing or getting an instant update.
- ```
+
 Bash
 ```bash
 python price_tracker.py check
+ ```
 ➡️ Start the Automatic Monitoring Service
 This runs the tracker in the background. It will check prices once immediately, and then every X hours.
- ```
+
 Bash
 ```bash
 # Check prices every 6 hours
 python price_tracker.py start --interval 6
-Press Ctrl + C to stop the service.
  ```
+Press Ctrl + C to stop the service.
+
 ➡️ Generate a Price Report
 View the price history for all your tracked products.
 
