@@ -2,11 +2,11 @@
 
 **Stop hitting refresh. Start saving money.**
 
-![Price Pulse Banner](https://placehold.co/1200x400/1e293b/94a3b8?text=Price%20Pulse%20Tracker&font=raleway)
+
 
 ---
 
-# Web Scraping and Price Monitoring App is a powerful and lightweight Python script that automates the tedious task of price watching. Never miss a deal on your favorite products from Amazon and Flipkart again. Set a target price, and let the tracker notify you the moment the price drops!
+## Web Scraping and Price Monitoring App is a powerful and lightweight Python script that automates the tedious task of price watching. Never miss a deal on your favorite products from Amazon and Flipkart again. Set a target price, and let the tracker notify you the moment the price drops!
 
 ## ✨ Key Features
 
