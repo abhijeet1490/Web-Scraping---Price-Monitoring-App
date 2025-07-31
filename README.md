@@ -52,11 +52,70 @@ Follow these steps to get your personal price tracker up and running.
 # 1. Clone the repository (or just download the script)
 # git clone [https://github.com/your-username/price-pulse-tracker.git](https://github.com/your-username/price-pulse-tracker.git)
 # cd price-pulse-tracker
+ ```
 
+```bash
 # 2. Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
+ ```
 
+#3. Configuration
+You must create a .env file to handle your email credentials securely.
+
+Create a file named .env in the root of the project directory.
+
+Add the following, filling in your details:
+```bash
+# .env file
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASSWORD=your_16_digit_gmail_app_password
+NOTIFICATION_EMAIL=email_to_send_alerts_to@example.com
+Important: For EMAIL_PASSWORD, you must use a Gmail App Password. You can generate one from your Google Account's security settings. Your regular password will not work.
+ ```
+
+#4. Usage
+Price Pulse is managed entirely from the command line.
+
+➡️ Add a Product
+
+Bash
+```bash
+# Usage: python price_tracker.py add "URL" --threshold YOUR_PRICE --name "PRODUCT_NAME"
+python price_tracker.py add "[https://www.amazon.in/dp/B0DGJHBX5Y](https://www.amazon.in/dp/B0DGJHBX5Y)" --threshold 73000 --name "iPhone 16 128 GB"
+➡️ Run a Single Price Check
+Perfect for testing or getting an instant update.
+ ```
+Bash
+```bash
+python price_tracker.py check
+➡️ Start the Automatic Monitoring Service
+This runs the tracker in the background. It will check prices once immediately, and then every X hours.
+ ```
+Bash
+```bash
+# Check prices every 6 hours
+python price_tracker.py start --interval 6
+Press Ctrl + C to stop the service.
+ ```
+➡️ Generate a Price Report
+View the price history for all your tracked products.
+
+Bash
+
+python price_tracker.py report
+🗺️ Future Roadmap
+[ ] Support for more e-commerce stores.
+
+[ ] Generate charts and graphs for price history visualization.
+
+[ ] A simple web interface (Flask/Django) to manage products.
+
+[ ] Deploy as a persistent cloud service (e.g., on a Raspberry Pi or a small VPS).
+
+Happy Tracking! 💸
+```bash
 # 3. Install the required packages
 pip install -r requirements.txt 
 # (Or: pip install requests beautifulsoup4 selenium pandas schedule python-dotenv)
+ ```
